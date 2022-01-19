@@ -9,7 +9,10 @@ import { JwtStrategy } from './jwt.strategy';
 import { TokenModule } from 'src/token/token.module';
 
 @Module ({
-  imports: [UsuarioModule, PassportModule, TokenModule,
+  imports: [
+    UsuarioModule,
+    PassportModule,
+    TokenModule,
    JwtModule.register({
       secret: jwtConstants.secret,
       signOptions: { expiresIn: '60s' },}),],
